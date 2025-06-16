@@ -1,22 +1,4 @@
-// let name = "ごっしー";
-// let greet = '私のニックネームニックネームは'+ name + "です";
-// console.log(greet);
-// let age = 28;
-// console.log(age);
- 
-//  const str1 = "ごっしー"
-//  const str2 = "私のニックネームは"
-//  const str3 = "です"
-//  const str4 ="歳"
-//  const str5 ="年齢は"
-//  const str6 ="です。"
-//  console.log(combinedString);
-//  let age = 28
-//  console.log(age)
-//  const combinedString = str2 + str1 +str3 + str5 + age + str4 + str6 
-//6_6ここまでやってわからん
-//6_7答えギズテックに載ってて鬱
-
+//基礎問題Q1
 const str1 = "ごっしー"
 const str4 = "歳"
 const str6 = "です。"
@@ -27,29 +9,14 @@ const combined = str1 + "の" + "年齢は" + age + str4 + str6
 console.log(combined)
 console.log(age)
 
-//6_8やる気出ないから明日やる
+//基礎問題Q2
+let languages = ["JavaScript","PHP","Ruby","Python","Go"];
+let template = `私の好きな言語は${languages[0]}です。`;
+let template2 = '私の好きな言語は' + languages[3] + 'です。';
+console.log(template);
+console.log(template2);
 
-let languages = []
-languages[1] = "JavaScript"
-languages[2] = "PHP"
-languages[3] = "Ruby"
-languages[4] = "Python"
-languages[5] = "Go"
-let templateText = `私の好きな言語は${languages[1]}です。
-次は${languages[4]}を勉強してみたいです。`
-console.log(templateText);
-
-
-// let languages = ["JavaScript","PHP","Ruby","Python","Go"];
-// let empties = [];
-// let template = "私の好きな言語は[0]です。"
-// let templateText = `${template}
-// 次は[4]を勉強してみたいです。`
-// console.log(templateText);
-//やりたかったこと_array型で変数を代入したかった
-//6_9
-//6_10_なんかできたwまじ意味不明wテンプレートに固執しすぎてた説濃厚てか今日寝てたら余裕で夕方で鬱
-
+//基礎問題Q3
 let user = {
   name: 'John',
   age: 26,
@@ -57,9 +24,9 @@ let user = {
   favorite: 'card',
 };
 console.log(user.age)
-//6_10これは余裕なんかいけるきしてきた神ってる
-//gitやらないといけないの鬱
 
+
+//基礎問題Q4
 let playerList = [
   {
     name: 'John',
@@ -86,24 +53,10 @@ console.log(playerList[0])
 console.log(playerList[0].favorites)
 console.log(playerList[1].favorites[1])
 
-// for (let i = 0; i < 3; i++) {
-//   console.log(playerList);
-//  }
-
-//find?ていうやつが条件要素？のものを取ってきてくれるらしい
-//上記のことを聞いてみること
-//ファイルJSコマンド5_配列関係から記述＋MDN出典
-//filterからplayerを選択後中のfavoriteでどこ選択するかを決まるincludesで要素を確定させる
-//やったけどずっとBobのことを認識してくれなかった
-//Bobの中の配列数を0より多いかをifで確かめる
-//{}を使ってlogの中身がifの配列に当てはまるようにしてconsoleで出力
-//値(Array)の要素を探し条件に当てはめる認識
-//とりまコマンド５のインデックス関係要素摘出関係を全てやる
-//誰だよwTinder入れたやつww
-
+//基礎問題Q5
 console.log((playerList[0].age+playerList[1].age+playerList[2].age)/3)
 
-//応用で余裕であればfor文もつくる！！！！！！！！
+//基礎問題Q6
 function sayHello (){
   console.log(hello)
 }
@@ -116,6 +69,7 @@ const sayWorld = function() {
   console.log("World")
 }
 
+//基礎問題Q7
 const userWithBirthday = { user,
   birthday: '2000-09-27'
 }
@@ -128,6 +82,7 @@ const userWithMethod = {
   }
 }
 
+//基礎問題Q8
 let calc = {}
 calc.add = function(x, y) {
   console.log(x + y);
@@ -151,7 +106,7 @@ calc.divide = function(x, y) {
 }
 calc.divide(25, 5)
 
-
+//基礎問題Q9
 function remainder(x, y) {
    return x % y
 }
@@ -175,11 +130,14 @@ console.log("5 を 3 で割った余りは " + result + " です。")
 //   console.log(x)
 // 上記はletでxを宣言してfunctionで関数として宣言あとはconsolに出力するだけ
 
+
+//応用問題Q1
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 console.log(getRandomInt(10))
 
+//応用問題Q2
 function consoleMessage(message, delay) {
   setTimeout(function() {
     console.log(message);
@@ -187,6 +145,7 @@ function consoleMessage(message, delay) {
 }
 consoleMessage("Hello World!", 3000)
 
+//応用問題Q3
 let num = 61
 if (num > 0) {
   console.log("num is greater than 0")
@@ -195,13 +154,14 @@ if (num > 0) {
 } else if (num = 0) {
   console.log("num is 0")
 } 
-//num is 0 だけがでてこないぜ！
 
+//応用問題Q4
 let numbers
 for (let numbers = 0; numbers < 100; numbers++) {
   console.log(numbers)
 }
 
+//応用問題Q5
 let mixed = [4, '2', 5, '8', '9', 0,];
 const evenNumbers = [];
 for (let i = 0; i < mixed.length; i++) {
@@ -213,5 +173,5 @@ for (let i = 0; i < mixed.length; i++) {
     console.log("not number")
 }
 }
-//not　numberの出し方わからんぜw
+
 
