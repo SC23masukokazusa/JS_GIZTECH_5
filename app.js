@@ -1,3 +1,4 @@
+
 //基礎問題Q1
 const str1 = "ごっしー"
 const str4 = "歳"
@@ -9,7 +10,20 @@ const combined = str1 + "の" + "年齢は" + age + str4 + str6
 console.log(combined)
 console.log(age)
 
+
 //基礎問題Q2
+// let languages = []
+// languages[1] = "JavaScript"
+// languages[2] = "PHP"
+// languages[3] = "Ruby"
+// languages[4] = "Python"
+// languages[5] = "Go"
+// let templateText = `私の好きな言語は${languages[1]}です。
+// 次は${languages[4]}を勉強してみたいです。`
+// console.log(templateText);
+
+
+//基礎問題Q2_1
 let languages = ["JavaScript","PHP","Ruby","Python","Go"];
 let template = `私の好きな言語は${languages[0]}です。`;
 let template2 = '私の好きな言語は' + languages[3] + 'です。';
@@ -24,7 +38,6 @@ let user = {
   favorite: 'card',
 };
 console.log(user.age)
-
 
 //基礎問題Q4
 let playerList = [
@@ -53,14 +66,17 @@ console.log(playerList[0])
 console.log(playerList[0].favorites)
 console.log(playerList[1].favorites[1])
 
-//基礎問題Q5
+// for (let i = 0; i < 3; i++) {
+//   console.log(playerList);
+//  }
 console.log((playerList[0].age+playerList[1].age+playerList[2].age)/3)
 
-//基礎問題Q6
+//基礎問題Q5
 function sayHello (){
   console.log(hello)
 }
 
+//基礎問題Q6
 function sayHello() {
   console.log("Hello")
 }
@@ -69,12 +85,12 @@ const sayWorld = function() {
   console.log("World")
 }
 
-//基礎問題Q7
 const userWithBirthday = { user,
   birthday: '2000-09-27'
 }
 console.log(userWithBirthday)
 
+//基礎問題Q7
 const userWithMethod = {
   ...user,
   sayHello: function() {
@@ -130,7 +146,6 @@ console.log("5 を 3 で割った余りは " + result + " です。")
 //   console.log(x)
 // 上記はletでxを宣言してfunctionで関数として宣言あとはconsolに出力するだけ
 
-
 //応用問題Q1
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -173,5 +188,3 @@ for (let i = 0; i < mixed.length; i++) {
     console.log("not number")
 }
 }
-
-
