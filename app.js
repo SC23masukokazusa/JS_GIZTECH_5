@@ -1,15 +1,28 @@
+
 //基礎問題Q1
-const str1 = "ごっしー"
+const nickname = "ごっしー"
 const str4 = "歳"
 const str6 = "です。"
 
 let age = 28
 
-const combined = str1 + "の" + "年齢は" + age + str4 + str6
+const combined = nickname + "の" + "年齢は" + age + str4 + str6
 console.log(combined)
-console.log(age)
+
 
 //基礎問題Q2
+// let languages = []
+// languages[1] = "JavaScript"
+// languages[2] = "PHP"
+// languages[3] = "Ruby"
+// languages[4] = "Python"
+// languages[5] = "Go"
+// let templateText = `私の好きな言語は${languages[1]}です。
+// 次は${languages[4]}を勉強してみたいです。`
+// console.log(templateText);
+
+
+//基礎問題Q2_1
 let languages = ["JavaScript","PHP","Ruby","Python","Go"];
 let template = `私の好きな言語は${languages[0]}です。`;
 let template2 = '私の好きな言語は' + languages[3] + 'です。';
@@ -24,7 +37,6 @@ let user = {
   favorite: 'card',
 };
 console.log(user.age)
-
 
 //基礎問題Q4
 let playerList = [
@@ -44,22 +56,26 @@ let playerList = [
     favorites: ['Football', 'Smash Bros.'],
   },
 ];
-const Bob = playerList.filter(player => player.favorites.includes('The Legend of Zelda'))
-if (Bob.length > 0) {
-console.log('The Legend of Zelda')
-}
+
+// const Bob = playerList.filter(player => player.favorites.includes('The Legend of Zelda'))
+// if (Bob.length > 0) {
+// console.log('The Legend of Zelda')
+// }
+
 //下記の文のやり方もある
-console.log(playerList[0])
-console.log(playerList[0].favorites)
+// console.log(playerList[0])
+// console.log(playerList[0].favorites)
 console.log(playerList[1].favorites[1])
 
+// for (let i = 0; i < 3; i++) {
+//   console.log(playerList);
+//  }
 //基礎問題Q5
-console.log((playerList[0].age+playerList[1].age+playerList[2].age)/3)
-
+console.log((playerList[0].age+playerList[1].age+playerList[2].age)/playerList.length)
 //基礎問題Q6
-function sayHello (){
-  console.log(hello)
-}
+// function sayHello (){
+//   console.log(hello)
+// }
 
 function sayHello() {
   console.log("Hello")
@@ -68,18 +84,26 @@ sayHello()
 const sayWorld = function() {
   console.log("World")
 }
+sayWorld()
 
-//基礎問題Q7
-const userWithBirthday = { user,
-  birthday: '2000-09-27'
-}
-console.log(userWithBirthday)
+// Q7-1
+// const userWithBirthday = {
+//   ...user,
+//   birthday: '2000-09-27'
+// }
+// console.log(userWithBirthday)
 
-const userWithMethod = {
-  ...user,
-  sayHello: function() {
-    console.log("Hello")
-  }
+//基礎問題Q7-2
+// const userWithMethod = {
+//   ...user,
+//   sayHello: function() {
+//     console.log("Hello")
+//   }
+// }
+// 基礎問題Q7
+user.birthday = "2000-09-27"
+user.sayHello = function() {
+  console.log('Hello!');
 }
 
 //基礎問題Q8
@@ -97,6 +121,7 @@ calc.subtract(15, 5)
 calc.multiply = function(x, y) {
   console.log(x * y)
 }
+calc.multiply(7, 7)
 
 calc.divide = function(x, y) {
   if (y === 0) {
@@ -107,12 +132,12 @@ calc.divide = function(x, y) {
 calc.divide(25, 5)
 
 //基礎問題Q9
-function remainder(x, y) {
+function remainder(x, y) {//仮の名前がついてる引数_例）今回は仮引数xとyに名づけました
    return x % y
 }
-const result = remainder(5, 3)
+const result = remainder(5, 3)//実際に値を渡しているところのことを実引数と呼んだりする
 console.log("5 を 3 で割った余りは " + result + " です。")
-
+//
 
 //Q10エラーになるためコメントアウトしました
 // function foo() {
@@ -130,12 +155,13 @@ console.log("5 を 3 で割った余りは " + result + " です。")
 //   console.log(x)
 // 上記はletでxを宣言してfunctionで関数として宣言あとはconsolに出力するだけ
 
-
 //応用問題Q1
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 console.log(getRandomInt(10))
+
+// Math.floor(Math.random() * 10);
 
 //応用問題Q2
 function consoleMessage(message, delay) {
@@ -151,15 +177,17 @@ if (num > 0) {
   console.log("num is greater than 0")
 } else if (num < 0) {
   console.log("num is less than 0")
-} else if (num = 0) {
+} else if (num === 0) {
   console.log("num is 0")
 } 
 
 //応用問題Q4
-let numbers
-for (let numbers = 0; numbers < 100; numbers++) {
-  console.log(numbers)
+let numbers = []
+let sum = 0
+for (let i = 0; i < 100; i++){
+  numbers.push(i)
 }
+console.log(numbers)
 
 //応用問題Q5
 let mixed = [4, '2', 5, '8', '9', 0,];
@@ -173,5 +201,3 @@ for (let i = 0; i < mixed.length; i++) {
     console.log("not number")
 }
 }
-
-
