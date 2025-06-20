@@ -187,7 +187,7 @@ let sum = 0
 for (let i = 0; i < 100; i++){
   numbers.push(i)
 }
-console.log(sum)
+console.log(numbers)
 
 //応用問題Q5
 let mixed = [4, '2', 5, '8', '9', 0,];
