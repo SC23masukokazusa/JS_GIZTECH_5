@@ -69,14 +69,13 @@ console.log(playerList[1].favorites[1])
 // for (let i = 0; i < 3; i++) {
 //   console.log(playerList);
 //  }
-console.log((playerList[0].age+playerList[1].age+playerList[2].age)/3)
-
 //基礎問題Q5
+console.log((playerList[0].age+playerList[1].age+playerList[2].age)/playerList.length)
+//基礎問題Q6
 function sayHello (){
   console.log(hello)
 }
 
-//基礎問題Q6
 function sayHello() {
   console.log("Hello")
 }
@@ -96,6 +95,10 @@ const userWithMethod = {
   sayHello: function() {
     console.log("Hello")
   }
+}
+user.birthday = "2000-09-27"
+user.sayHello = function() {
+  console.log('Hello!');
 }
 
 //基礎問題Q8
@@ -172,8 +175,8 @@ if (num > 0) {
 
 //応用問題Q4
 let numbers
-for (let numbers = 0; numbers < 100; numbers++) {
-  console.log(numbers)
+for (let i = 0; i < 100; i++) {
+  console.log(i)
 }
 
 //応用問題Q5
